@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/quantize.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/quantize",
+      "dest": "api/quantize.py"
+    },
+    {
+      "src": "/api/quantize",
+      "dest": "api/quantize.py"
+    }
+  ]
+}
