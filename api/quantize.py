@@ -878,6 +878,7 @@ async def quantize(request: Request):
     if phase == "freeze":
 
         if not validate_freeze_request(body):
+            print("INVALID FREEZE REQUEST:", repr(body), flush=True)
             return JSONResponse(
                 {"error": "INVALID_INPUT"},
                 status_code=400,
